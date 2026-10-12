@@ -1,0 +1,34 @@
+schema_version: 1
+
+keyboard:
+  alt_tap:
+    timeout_ms: 200
+    left:
+      tap: ime_off
+    right:
+      tap: ime_on
+  ime:
+    ime_on:
+      key: "0x90"  # HID Keyboard LANG1 -> Windows VK_IME_ON
+    ime_off:
+      key: "0x91"  # HID Keyboard LANG2 -> Windows VK_IME_OFF
+
+keymap:
+  enabled: true
+  # Source and destination are USB HID keyboard usage IDs (hexadecimal).
+  # Set shift to the output Shift state needed for the intended character.
+  mappings:
+    "0x1F": {plain: {key: "0x1F", shift: false}, shifted: {key: "0x2F", shift: false}}
+    "0x23": {plain: {key: "0x23", shift: false}, shifted: {key: "0x2E", shift: false}}
+    "0x24": {plain: {key: "0x24", shift: false}, shifted: {key: "0x23", shift: true}}
+    "0x25": {plain: {key: "0x25", shift: false}, shifted: {key: "0x34", shift: true}}
+    "0x26": {plain: {key: "0x26", shift: false}, shifted: {key: "0x25", shift: true}}
+    "0x27": {plain: {key: "0x27", shift: false}, shifted: {key: "0x26", shift: true}}
+    "0x2D": {plain: {key: "0x2D", shift: false}, shifted: {key: "0x87", shift: true}}
+    "0x2E": {plain: {key: "0x2D", shift: true}, shifted: {key: "0x33", shift: true}}
+    "0x2F": {plain: {key: "0x30", shift: false}, shifted: {key: "0x30", shift: true}}
+    "0x30": {plain: {key: "0x31", shift: false}, shifted: {key: "0x31", shift: true}}
+    "0x31": {plain: {key: "0x87", shift: false}, shifted: {key: "0x89", shift: true}}
+    "0x33": {plain: {key: "0x33", shift: false}, shifted: {key: "0x34", shift: false}}
+    "0x34": {plain: {key: "0x24", shift: true}, shifted: {key: "0x1F", shift: true}}
+    "0x35": {plain: {key: "0x2F", shift: true}, shifted: {key: "0x2E", shift: true}}
